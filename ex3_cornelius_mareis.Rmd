@@ -1,0 +1,21 @@
+---
+title: "ex_3_cornelius_mareis"
+author: "Cornelius Mareis (12296117)"
+date: "2023-06-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 1
+
+d)
+Strengths: 
+1. Being able to track your project in one sight and the possibility to revert to different stages of the project.
+2. The fact that you can work with multiple people on a project.
+
+Weaknesses:
+1. Getting git started can be a very frustrating experience as it is very confusing without help.
+2. The poor GUI of git and the fact that it isn't optimized for all operation systems e.g. Windows.
