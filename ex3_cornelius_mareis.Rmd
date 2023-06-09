@@ -9,6 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+library(tidyverse)
+```
+
+
 ## Exercise 1
 
 d)
@@ -24,3 +29,26 @@ Weaknesses:
 
 a)
 repository link: git@github.com:c0oo/exeRcise-sheet-3.git
+
+## Exercise 3
+
+b)
+
+```{r}
+names_2021 <- read_csv("data/vornamen_2021.csv")
+names_2022 <- read_csv("data/open_data_portal_2022.csv")
+
+typeof(names_2021$Anzahl)
+```
+
+The count variable isn't numeric because the data is not complete as the count of uncommon names are only states as "4 or less" and because of that it cant be numeric.
+
+```{r}
+names_2021$Anzahl <- str_replace(names_2021$Anzahl, "4 oder weniger", "4")
+names_2021$Anzahl <- as.numeric(names_2021$Anzahl)
+
+names_2022$Anzahl <- str_replace(names_2022$Anzahl, "4 oder weniger", "4")
+names_2022$Anzahl <- as.numeric(names_2022$Anzahl)
+```
+
+In my approach I just replaced all "4 oder weniger" with 4 and then changed it into numeric. The effect of this is, that the sum of the babies don't correspond to the reality but if we do it with both data sets we can at least compare them as all changes are the same.
