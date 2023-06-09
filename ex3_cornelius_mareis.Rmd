@@ -85,3 +85,49 @@ table1 <- combined_names %>% group_by(Vorname) %>% summarise(Anzahl = sum(Anzahl
 knitr::kable(table1, caption = "Top 10 baby names in the year 2021 and 2022 combined")
 ```
 
+
+## Exercise 4
+
+a)
+
+The correct apply function for the column-wise means would be sapply(). 
+lapply() didnt work because the second argument is "2" but should be a function or function name and "2" isn't a valid function. "mean" should have been the second argument.
+
+prompt: 
+1. the chunk of code
+2. "can you tell me which apply function would be correct and why it didnt work?"
+
+```{r}
+# correct code
+
+tax_data <- data.frame(
+  Name = c("Munich GmbH", "ABC Inc.", "Backpacks 1980", "Bavarian Circus"),
+  Tax_2019 = c(5000, 4000, 6000, 3500),
+  Tax_2020 = c(4800, 4200, 5800, 3700),
+  Tax_2021 = c(5200, 3800, 5900, 3400)
+)
+
+column_means <- sapply(tax_data[, -1], mean)
+column_means
+
+```
+
+prompt:
+I didnt have to ask as ChatGPT automaticly corrected it in the last question
+
+```{r}
+#rowwise means
+tax_data <- data.frame(
+  Name = c("Munich GmbH", "ABC Inc.", "Backpacks 1980", "Bavarian Circus"),
+  Tax_2019 = c(5000, 4000, 6000, 3500),
+  Tax_2020 = c(4800, 4200, 5800, 3700),
+  Tax_2021 = c(5200, 3800, 5900, 3400)
+)
+
+row_means <- rowMeans(tax_data[, -1])
+row_means
+
+```
+
+prompt:
+Could you calculate the rowwise means?
