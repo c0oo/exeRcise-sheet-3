@@ -71,3 +71,9 @@ names_2021 <- names_2021 %>% mutate(year = 2021)
 names_2022 <- names_2022 %>% mutate(year = 2022)
 ```
 
+e)
+
+```{r}
+combined_names <- bind_rows(names_2021, names_2022)
+```
+
