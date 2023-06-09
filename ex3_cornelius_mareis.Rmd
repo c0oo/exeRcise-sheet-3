@@ -19,3 +19,8 @@ Strengths:
 Weaknesses:
 1. Getting git started can be a very frustrating experience as it is very confusing without help.
 2. The poor GUI of git and the fact that it isn't optimized for all operation systems e.g. Windows.
+
+## Exercise 2
+
+a)
+repository link: git@github.com:c0oo/exeRcise-sheet-3.git
