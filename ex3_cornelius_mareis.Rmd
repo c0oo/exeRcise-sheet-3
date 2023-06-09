@@ -52,3 +52,14 @@ names_2022$Anzahl <- as.numeric(names_2022$Anzahl)
 ```
 
 In my approach I just replaced all "4 oder weniger" with 4 and then changed it into numeric. The effect of this is, that the sum of the babies don't correspond to the reality but if we do it with both data sets we can at least compare them as all changes are the same.
+
+
+c)
+
+```{r}
+sum(names_2021$Anzahl)
+sum(names_2022$Anzahl)
+```
+
+The bigger baby-boom was in the year 2021.
+
