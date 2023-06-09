@@ -77,3 +77,11 @@ e)
 combined_names <- bind_rows(names_2021, names_2022)
 ```
 
+
+f)
+
+```{r}
+table1 <- combined_names %>% group_by(Vorname) %>% summarise(Anzahl = sum(Anzahl)) %>% arrange(desc(Anzahl))  %>% head(10)
+knitr::kable(table1, caption = "Top 10 baby names in the year 2021 and 2022 combined")
+```
+
