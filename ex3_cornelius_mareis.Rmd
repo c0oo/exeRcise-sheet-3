@@ -28,7 +28,9 @@ Weaknesses:
 ## Exercise 2
 
 a)
-repository link: git@github.com:c0oo/exeRcise-sheet-3.git
+repository link: 
+git@github.com:c0oo/exeRcise-sheet-3.git
+https://github.com/c0oo/exeRcise-sheet-3.git
 
 ## Exercise 3
 
