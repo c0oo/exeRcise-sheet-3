@@ -1,5 +1,5 @@
 ---
-title: "ex_3_cornelius_mareis"
+title: "Exercise Sheet #3"
 author: "Cornelius Mareis (12296117)"
 date: "2023-06-08"
 output: html_document
@@ -113,7 +113,7 @@ column_means
 ```
 
 prompt:
-I didnt have to ask as ChatGPT automaticly corrected it in the last question
+(I didnt have to ask as ChatGPT automaticly corrected it in the last question)
 
 ```{r}
 #rowwise means
@@ -131,3 +131,37 @@ row_means
 
 prompt:
 Could you calculate the rowwise means?
+
+b)
+
+```{r}
+# Define a nested list
+nested_list <- list(
+  a = 1,
+  b = list(
+    c = 2,
+    d = list(
+      e = 3,
+      f = 4
+    )
+  ),
+  g = 5
+)
+
+# Define a function to increment each element by 1
+increment <- function(x) {
+  x + 1
+}
+
+# Apply the increment function using rapply
+result <- rapply(nested_list, increment)
+
+# Print the result
+print(result)
+
+```
+
+The rapply() function is used to recursively apply a function to elements of a nested lists for example. In this example rapply() adds the increment recursively to each element in the nested list. The resulting list contains the incremented values. 
+
+prompt:
+can you explain what the rapply() function does and give an easy example with mock data where the function is used?
