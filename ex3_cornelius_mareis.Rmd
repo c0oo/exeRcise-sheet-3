@@ -63,3 +63,11 @@ sum(names_2022$Anzahl)
 
 The bigger baby-boom was in the year 2021.
 
+
+d)
+
+```{r}
+names_2021 <- names_2021 %>% mutate(year = 2021)
+names_2022 <- names_2022 %>% mutate(year = 2022)
+```
+
